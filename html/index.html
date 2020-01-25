@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css"> -->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/scripts/gauge.min.js"></script>
+    
+    
+    <!-- <script>var socket = io();</script> -->
+
+</head>
+
+<body class='body'>
+    <div id="speedo" styles="display:flex;flexDirection:row;">
+        <canvas data-type="radial-gauge"
+        data-width="400"
+        data-height="400"
+        data-units="Mph"
+        data-title="false"
+        data-value="0"
+        data-min-value="0"
+        data-max-value="220"
+        data-major-ticks="0,20,40,60,80,100,120,140,160,180,200,220"
+        data-minor-ticks="2"
+        data-stroke-ticks="false"
+        data-highlights='[
+            
+            { "from": 0, "to": 220, "color": "rgba(0,0,255,.25)" }
+        ]'
+        data-color-plate="#222"
+        data-color-major-ticks="#f5f5f5"
+        data-color-minor-ticks="#ddd"
+        data-color-title="#fff"
+        data-color-units="#ccc"
+        data-color-numbers="#eee"
+        data-color-needle-start="rgba(240, 128, 128, 1)"
+        data-color-needle-end="rgba(255, 160, 122, .9)"
+        data-value-box="true"
+        data-animation-rule="bounce"
+        data-animation-duration="500"
+        data-font-value="Led"
+        data-animated-value="true"
+></canvas>    
+<canvas id="revCounter" data-type="radial-gauge"
+data-width="400"
+data-height="400"
+data-units="rev/m"
+data-title="false"
+data-value="0"
+data-min-value="0"
+data-max-value="8000"
+data-major-ticks="0,1000,2000,3000,4000,5000,6000,7000,8000"
+data-minor-ticks="2"
+data-stroke-ticks="false"
+data-highlights='[
+    { "from": 0, "to": 6500, "color": "rgba(0,255,0,.15)" },
+    { "from": 6500, "to": 7000, "color": "rgba(255,255,0,.15)" },
+    { "from": 7000, "to": 8000, "color": "rgba(255,30,0,.25)" }
+]'
+data-color-plate="#222"
+data-color-major-ticks="#f5f5f5"
+data-color-minor-ticks="#ddd"
+data-color-title="#fff"
+data-color-units="#ccc"
+data-color-numbers="#eee"
+data-color-needle-start="rgba(240, 128, 128, 1)"
+data-color-needle-end="rgba(255, 160, 122, .9)"
+data-value-box="true"
+data-animation-rule="bounce"
+data-animation-duration="500"
+data-font-value="Led"
+data-animated-value="true"
+></canvas>
+<button onClick="reset()">reset</button>
+
+    </div>
+
+
+        <script type='text/javascript' src='./index.js'></script>
+</body>
+
+</html>
